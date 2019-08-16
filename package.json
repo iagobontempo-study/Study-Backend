@@ -2,6 +2,10 @@
   "name": "Study-Backend-Migrations",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "production": "pm2 start index.js --name knowledge-backend"
+  },
   "license": "MIT",
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
@@ -19,5 +23,8 @@
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "pm2": "^3.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.4"
   }
 }
