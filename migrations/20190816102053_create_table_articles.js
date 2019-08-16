@@ -1,3 +1,4 @@
+//comand on cmd > knex migrate:latest to use DOWN
 
 exports.up = function(knex) {
     return knex.schema.createTable('articles', table => {
@@ -10,6 +11,8 @@ exports.up = function(knex) {
         table.integer('categoryId').unsigned().references('id').inTable('categories').notNull() //important to use unsigned to foreign keys
     })
 };
+
+//comand on cmd > knex migrate:rollback to use DOWN
 
 exports.down = function(knex) {
     return knex.schema.dropTable('articles')

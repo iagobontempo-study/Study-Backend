@@ -1,3 +1,4 @@
+//comand on cmd > knex migrate:latest to use DOWN
 
 exports.up = function(knex) {
     return knex.schema.createTable('categories', table => {
@@ -7,6 +8,8 @@ exports.up = function(knex) {
 
     })
 };
+
+//comand on cmd > knex migrate:rollback to use DOWN
 
 exports.down = function(knex) {
     return knex.schema.dropTable('categories')
